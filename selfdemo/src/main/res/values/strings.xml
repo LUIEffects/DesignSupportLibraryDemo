@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SelfDemo</string>
+    <string name="nv_talk">CC Talk</string>
+    <string name="nv_class">HJ Class</string>
+    <string name="nv_words">Words</string>
+    <string name="nv_bighj">Big HJ</string>
+    <string name="android">Android</string>
+    <string name="ios">IOS</string>
+    <string name="version">Version</string>
+    <string name="course">Course</string>
+    <string name="settings">Settings</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="@string/course">
+            <menu>
+                <item
+                    android:checkable="true"
+                    android:id="@+id/nv_talk"
+                    android:icon="@drawable/ic_dashboard"
+                    android:title="@string/nv_talk"/>
+                <item
+                    android:checkable="true"
+                    android:id="@+id/nv_class"
+                    android:icon="@drawable/ic_event"
+                    android:title="@string/nv_class"/>
+                <item
+                    android:checkable="true"
+                    android:id="@+id/nv_words"
+                    android:icon="@drawable/ic_headset"
+                    android:title="@string/nv_words"/>
+                <item
+                    android:checkable="true"
+                    android:id="@+id/nv_bighj"
+                    android:icon="@drawable/ic_forum"
+                    android:title="@string/nv_bighj"/>
+            </menu>
+        </item>
+
+        <item android:title="@string/version">
+            <menu>
+                <item
+                    android:id="@+id/ver_android"
+                    android:icon="@drawable/ic_dashboard"
+                    android:title="@string/android"/>
+                <item
+                    android:id="@+id/ver_ios"
+                    android:icon="@drawable/ic_dashboard"
+                    android:title="@string/ios"/>
+            </menu>
+        </item>
+    </group>
+</menu>
