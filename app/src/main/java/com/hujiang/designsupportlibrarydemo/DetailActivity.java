@@ -25,4 +25,5 @@ public class DetailActivity extends AppCompatActivity {
     public void checkin(View view) {
         Snackbar.make(view, "checkin success!", Snackbar.LENGTH_SHORT).show();
     }
+
 }
