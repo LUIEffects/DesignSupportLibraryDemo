@@ -8,6 +8,7 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -48,9 +49,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         tabLayout = (TabLayout)findViewById(R.id.tabLayout);
         viewpager = (ViewPager)findViewById(R.id.viewpager);
-        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
-        toolbar.setTitle("Toolbar");
-        setSupportActionBar(toolbar);
+
+        initToolBar();
 
         List<String> titles = new ArrayList<>();
         titles.add("Title one");
@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         MyFragmentAdapter myFragmentAdapter = new MyFragmentAdapter(getSupportFragmentManager(),fragments,titles);
         viewpager.setAdapter(myFragmentAdapter);
         tabLayout.setupWithViewPager(viewpager);
+    }
+
+    private void initToolBar() {
+        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
+        toolbar.setTitle("Toolbar");
+        setSupportActionBar(toolbar);
     }
 
     private void initListener() {
@@ -129,8 +135,11 @@ public class MainActivity extends AppCompatActivity {
                             }
                         })
                         .show();
-                break;
+                return true;
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 }
