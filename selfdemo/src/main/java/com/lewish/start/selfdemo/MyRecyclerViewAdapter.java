@@ -1,11 +1,11 @@
 package com.lewish.start.selfdemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 /**
  * Created by Administrator on 2016/11/1 16:17.
@@ -29,7 +29,7 @@ public class MyRecyclerViewAdapter  extends RecyclerView.Adapter<MyRecyclerViewA
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "活动还没写", Toast.LENGTH_SHORT).show();
+                mContext.startActivity(new Intent(mContext,DetailActivity.class));
             }
         });
     }
